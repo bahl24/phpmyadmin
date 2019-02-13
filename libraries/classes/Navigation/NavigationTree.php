@@ -1567,6 +1567,10 @@ class NavigationTree
             $retval .= RecentFavoriteTable::getInstance('favorite')
                 ->getHtml();
         }
+        if ($GLOBALS['cfg']['NumFavoriteDb'] > 0) {
+            $retval .= RecentFavoriteDb::getInstance('favorite')
+                ->getHtml();
+        }
         $retval .= '<div class="clearfloat"></div>';
         $retval .= '</div>';
 
